@@ -48,5 +48,6 @@
 
 8月31日：결과 화면, 마치며
 
-
 ---
+
+#### Developing Diary : 開発ブログ(https://kurooru.tistory.com/category/Unity)
