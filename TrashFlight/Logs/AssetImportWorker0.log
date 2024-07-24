@@ -207,3 +207,19 @@ Received Import Request.
 Number of updated assets reloaded before import = 0
 Start importing Assets/Sprites/george.png using Guid(cca26e6bd0ec34cb28b83bf9880a133c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4511eaa9f6c58db89483b7f2d7e26313') in 0.039350 seconds 
 Number of asset objects unloaded after import = 18
+========================================================================
+Received Import Request.
+  Time since last request: 542.920206 seconds.
+  path: Assets/Sprites/Run
+  artifactKey: Guid(d7371b1c5f3ff4921be4ea4affc1b17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Run using Guid(d7371b1c5f3ff4921be4ea4affc1b17e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'da8133461436248b1a61e5467fd0da0f') in 0.002075 seconds 
+Number of asset objects unloaded after import = 0
+========================================================================
+Received Import Request.
+  Time since last request: 1.124584 seconds.
+  path: Assets/Sprites/Run.anim
+  artifactKey: Guid(470fc844b179c40208ec62501a0a3664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Number of updated assets reloaded before import = 0
+Start importing Assets/Sprites/Run.anim using Guid(470fc844b179c40208ec62501a0a3664) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6de048f74ee4dc0167bbf8ceec43793') in 0.589019 seconds 
+Number of asset objects unloaded after import = 1
