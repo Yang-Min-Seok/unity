@@ -15,6 +15,7 @@ public class Background : MonoBehaviour
         if (transform.position.y < -10) {
             // y값을 -10에서 10으로 옮기기 => 10 * 2
             transform.position += new Vector3(0, 10 * 2f, 0);
+            
         }
     }
 }
