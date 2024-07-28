@@ -4,7 +4,7 @@
 
 簡単なモバイルゲーム開発
 
-#### 講義：나도코딩 유니티(https://www.youtube.com/watch?v=rJE6bhVUNhk&t=3119s)
+#### 講義：나도코딩 Unity(https://www.youtube.com/watch?v=rJE6bhVUNhk&t=3119s)
 
 ---
 
