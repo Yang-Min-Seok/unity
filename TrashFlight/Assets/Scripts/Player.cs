@@ -6,7 +6,13 @@ public class Player : MonoBehaviour
 {   
     // 값을 넣을 수 있게 해줌 (유니티에서)
     [SerializeField]
-    private float moveSpeed; 
+    private float moveSpeed;
+
+    [SerializeField]
+    private GameObject weapon;
+
+    [SerializeField]
+    private Transform shootTransform;
 
     // Update is called once per frame
     void Update()
@@ -43,5 +49,12 @@ public class Player : MonoBehaviour
         // 움직이기
         transform.position = new Vector3(toX, transform.position.y, transform.position.z);
 
+        // 무기 쏘기
+        Shoot();
+    }
+
+    // 무기 쏘기
+    void Shoot() {
+        Instantiate(weapon, shootTransform.position, Quaternion.identity);
     }
 }
