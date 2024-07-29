@@ -7,6 +7,11 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 10f;
 
+    // 처음 호출될 때 실행
+    void Start() {
+        Destroy(gameObject, 1f);
+    }
+
     // Update is called once per frame
     void Update()
     {

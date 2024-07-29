@@ -14,6 +14,10 @@ public class Player : MonoBehaviour
     [SerializeField]
     private Transform shootTransform;
 
+    [SerializeField]
+    private float shootInterval = 0.05f; // 슈팅 간격 설정
+    private float lastShotTime = 0f; // 마지막으로 쏜 시각
+
     // Update is called once per frame
     void Update()
     {   
@@ -55,6 +59,12 @@ public class Player : MonoBehaviour
 
     // 무기 쏘기
     void Shoot() {
-        Instantiate(weapon, shootTransform.position, Quaternion.identity);
+        // 시작한 시간 - 마지막 쏜 시각이 간격보다 커지면
+        if (Time.time - lastShotTime > shootInterval) {
+            // 발사
+            Instantiate(weapon, shootTransform.position, Quaternion.identity);
+            // 마지막 쏜 시각 업데이트
+            lastShotTime = Time.time;
+        }
     }
 }
