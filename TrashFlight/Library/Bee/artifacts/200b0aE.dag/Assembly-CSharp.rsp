@@ -368,6 +368,7 @@
 -r:"Library/Bee/artifacts/200b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Background.cs"
 "Assets/Scripts/Player.cs"
+"Assets/Scripts/Weapon.cs"
 -langversion:9.0
 /deterministic
 /optimize+
