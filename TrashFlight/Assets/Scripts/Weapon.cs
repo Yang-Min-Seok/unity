@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
 
     // 처음 호출될 때 실행
     void Start() {
+        // 1초뒤에 gameObject 삭제
         Destroy(gameObject, 1f);
     }
 
