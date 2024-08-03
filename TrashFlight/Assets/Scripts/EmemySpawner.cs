@@ -14,11 +14,13 @@ public class EmemySpawner : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {   
-        // 랜덤으로 인덱스 생성하기
-        int index = Random.Range(0, ememies.Length);
-
-        // 생성하기
-        SpawnEnemy(arrPosX[0], index);
+        // arrPosX에서 posX를 하나씩 꺼내 반복
+        foreach(float posX in arrPosX) {
+            // 랜덤으로 인덱스 생성하기
+            int index = Random.Range(0, ememies.Length);
+            // 생성하기
+            SpawnEnemy(posX, index);
+        }
     }
 
     // 적 생성 함수

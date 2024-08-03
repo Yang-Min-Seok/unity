@@ -4,7 +4,7 @@
 
 簡単なモバイルゲーム開発
 
-#### 講義：나도코딩 Unity(https://www.youtube.com/watch?v=rJE6bhVUNhk&t=3119s)
+#### 講義：나도코딩 Unity(https://youtu.be/rJE6bhVUNhk?si=NnRYjcHZvVTcJEtu)
 
 ---
 
@@ -30,7 +30,7 @@
 
 8月3日：~~敵作り~~
 
-8月5日：ランダムで敵作り
+8月5日：~~ランダムで敵作り~~
 
 8月7日：敵無限生成
 
