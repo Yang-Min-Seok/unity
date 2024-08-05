@@ -9,6 +9,11 @@ public class Enemy : MonoBehaviour
 
     private float minY = -7;
 
+    // 외부에서 메소드 사용 가능 (public)
+    public void SetMoveSpeed(float moveSpeed) {
+        this.moveSpeed = moveSpeed;
+    }
+
     // Update is called once per frame
     void Update()
     {   

@@ -29,6 +29,8 @@ public class EmemySpawner : MonoBehaviour
     IEnumerator EnemyRoutine() {
         yield return new WaitForSeconds(3f);
 
+        // 이동 속도
+        float moveSpeed = 5f;
         // 생성횟수
         int spawnCount = 0;
         // 생성할 적의 인덱스
@@ -38,13 +40,14 @@ public class EmemySpawner : MonoBehaviour
             // arrPosX에서 posX를 하나씩 꺼내 반복
             foreach(float posX in arrPosX) {
                 // 생성하기
-                SpawnEnemy(posX, enemyIndex);
+                SpawnEnemy(posX, enemyIndex, moveSpeed);
             }
 
             spawnCount++;
 
             if (spawnCount % 10 == 0) {
                 enemyIndex++;
+                moveSpeed += 2;
             }
             
             yield return new WaitForSeconds(spawnInterval);
@@ -52,7 +55,7 @@ public class EmemySpawner : MonoBehaviour
     }
 
     // 적 생성 함수
-    void SpawnEnemy(float posX, int index) {
+    void SpawnEnemy(float posX, int index, float moveSpeed) {
         
         // 적 위치 정의
         Vector3 spawnPos = new Vector3(posX, transform.position.y, transform.position.z);
@@ -62,13 +65,14 @@ public class EmemySpawner : MonoBehaviour
             index++;
         }
 
-
         // 인덱스 오버 방지
         if (index >= ememies.Length) {
             index = ememies.Length - 1;
         }
 
         // 적 객체 정의
-        Instantiate(ememies[index], spawnPos, Quaternion.identity);
+        GameObject enemyObject = Instantiate(ememies[index], spawnPos, Quaternion.identity);
+        Enemy enemy = enemyObject.GetComponent<Enemy>();
+        enemy.SetMoveSpeed(moveSpeed);
     }
 }
