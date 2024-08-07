@@ -7,6 +7,9 @@ public class Weapon : MonoBehaviour
     [SerializeField]
     private float moveSpeed = 10f;
 
+    // 공격력
+    public float damage = 1f;
+
     // 처음 호출될 때 실행
     void Start() {
         // 1초뒤에 gameObject 삭제
