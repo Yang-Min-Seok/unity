@@ -8,7 +8,8 @@ public class Enemy : MonoBehaviour
     private float moveSpeed = 10f;
 
     private float minY = -7f;
-
+    
+    [SerializeField]
     private float hp = 1f;
 
     // 외부에서 메소드 사용 가능 (public)

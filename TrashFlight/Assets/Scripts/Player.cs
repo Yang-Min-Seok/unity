@@ -67,4 +67,13 @@ public class Player : MonoBehaviour
             lastShotTime = Time.time;
         }
     }
+
+    // 플레이어 충돌 처리
+    private void OnTriggerEnter2D(Collider2D other) {
+        // 충돌 대상이 Ememy이면
+        if (other.gameObject.tag == "Enemy") {
+            Debug.Log("Game Over");
+            Destroy(gameObject);
+        }
+    }
 }
