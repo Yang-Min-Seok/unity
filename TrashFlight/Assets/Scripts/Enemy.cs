@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
-{
+{   
+    [SerializeField]
+    private GameObject coin;
+    
     [SerializeField]
     private float moveSpeed = 10f;
 
@@ -41,6 +44,8 @@ public class Enemy : MonoBehaviour
             if (hp <= 0) {
                 // ememy없애주기
                 Destroy(gameObject);
+                // 코인 만들기
+                Instantiate(coin, transform.position, Quaternion.identity);
             }
             // 미사일 없애주기
             Destroy(other.gameObject);
