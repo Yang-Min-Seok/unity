@@ -22,27 +22,6 @@ public class Player : MonoBehaviour
     void Update()
     {   
 
-        // // 키보드로부터 입력받은 좌우값
-        // float horizontalInput = Input.GetAxisRaw("Horizontal");
-        
-        // // 키보드로부터 입력받은 상하값
-        // // float vertialInput = Input.GetAxisRaw("Vertical");
-
-        // // 움직이기
-        // Vector3 moveTo = new Vector3(horizontalInput, 0f, 0f);
-        // transform.position += moveTo * moveSpeed * Time.deltaTime;
-
-        // // moveTo -> 좌우 이동만 허용
-        // Vector3 moveTo = new Vector3(moveSpeed * Time.deltaTime, 0, 0);
-        // // 키보드로부터 받은 입력값이 좌이동이면
-        // if (Input.GetKey(KeyCode.LeftArrow)) {
-        //     // 포지션을 -= moveTo로 변환
-        //     transform.position -= moveTo;
-        // } else if (Input.GetKey(KeyCode.RightArrow)) { // 우이동이면
-        //     // 포지션을 += moveTo로 변환
-        //     transform.position += moveTo;
-        // }
-
         // 마우스 좌표 값 가져오기
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
@@ -74,8 +53,8 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Enemy") {
             Debug.Log("Game Over");
             Destroy(gameObject);
-        } else if (other.gameObject.tag == "Coin") {
-            Debug.Log("Coin + 1");
+        } else if (other.gameObject.tag == "Coin") { // 충돌 대상이 코인인 경우
+            GameManager.instance.IncreaseCoin(); // 코인 올려주기
             Destroy(other.gameObject);
         }
     }
