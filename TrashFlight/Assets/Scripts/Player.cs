@@ -9,7 +9,8 @@ public class Player : MonoBehaviour
     private float moveSpeed;
 
     [SerializeField]
-    private GameObject weapon;
+    private GameObject[] weapons;
+    private int weaponIndex = 0;
 
     [SerializeField]
     private Transform shootTransform;
@@ -41,7 +42,7 @@ public class Player : MonoBehaviour
         // 시작한 시간 - 마지막 쏜 시각이 간격보다 커지면
         if (Time.time - lastShotTime > shootInterval) {
             // 발사
-            Instantiate(weapon, shootTransform.position, Quaternion.identity);
+            Instantiate(weapons[weaponIndex], shootTransform.position, Quaternion.identity);
             // 마지막 쏜 시각 업데이트
             lastShotTime = Time.time;
         }
@@ -56,6 +57,15 @@ public class Player : MonoBehaviour
         } else if (other.gameObject.tag == "Coin") { // 충돌 대상이 코인인 경우
             GameManager.instance.IncreaseCoin(); // 코인 올려주기
             Destroy(other.gameObject);
+        }
+    }
+
+    // 무기 업그레이드
+    public void Upgrade() {
+        weaponIndex++;
+        // 방어코드
+        if (weaponIndex >= weapons.Length) {
+            weaponIndex = weapons.Length - 1;
         }
     }
 }

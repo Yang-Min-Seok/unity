@@ -18,13 +18,23 @@ public class GameManager : MonoBehaviour
             // instance에 GameManager 넣어주기
             instance = this;
         }
-
-
     }
 
-    // 코인 수 증가
+    // 코인 수 증가 처리
     public void IncreaseCoin() {
         coin++;
+        
+        // UI 반영
         text.SetText(coin.ToString());
+
+        if (coin % 10 == 0) {
+            // player 객체 불러오기
+            Player player = FindObjectOfType<Player>();
+            // 무기 업그레이드
+            if (player != null) {
+                player.Upgrade();
+            }
+        }
+
     }
 }

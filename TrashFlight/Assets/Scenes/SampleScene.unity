@@ -729,7 +729,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 17.80127, y: 0, z: 0, w: 5.9335938}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -962,8 +962,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 214.11066, y: -106.87964}
-  m_SizeDelta: {x: 363.9452, y: 154.3737}
+  m_AnchoredPosition: {x: 193.34253, y: -83.14453}
+  m_SizeDelta: {x: 322.4089, y: 106.9035}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1429404241
 Canvas:
@@ -1304,7 +1304,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  weapon: {fileID: 847222733344368209, guid: e0cfef5cd2aed43bb9a7c8f04661cfe0, type: 3}
+  weapons:
+  - {fileID: 847222733344368209, guid: e0cfef5cd2aed43bb9a7c8f04661cfe0, type: 3}
+  - {fileID: 847222733344368209, guid: 4e5fd859a90b247f68acb5fd4b041e95, type: 3}
+  - {fileID: 847222733344368209, guid: 365e47357953a443780e76aed626cd7b, type: 3}
   shootTransform: {fileID: 1867656113}
   shootInterval: 0.1
 --- !u!50 &1848318359
