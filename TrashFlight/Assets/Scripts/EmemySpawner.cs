@@ -8,6 +8,9 @@ public class EmemySpawner : MonoBehaviour
     [SerializeField]
     private GameObject[] ememies;
 
+    [SerializeField]
+    private GameObject Boss;
+
     // x좌표 저장 (5개의 적의 시작 x좌표)
     private float[] arrPosX = {-2.2f, -1.1f, 0f, 1.1f, 2.2f};
 
@@ -49,6 +52,14 @@ public class EmemySpawner : MonoBehaviour
                 enemyIndex++;
                 moveSpeed += 2;
             }
+
+            // 적 배열 길이보다 인덱스가 커지면 보스 등장시키기
+            if (enemyIndex >= ememies.Length) {
+                SpawnBoss();
+                // 같이 내려오는 적들 인덱스 초기화
+                enemyIndex = 0;
+                moveSpeed = 5f;
+            }
             
             yield return new WaitForSeconds(spawnInterval);
         }
@@ -74,5 +85,9 @@ public class EmemySpawner : MonoBehaviour
         GameObject enemyObject = Instantiate(ememies[index], spawnPos, Quaternion.identity);
         Enemy enemy = enemyObject.GetComponent<Enemy>();
         enemy.SetMoveSpeed(moveSpeed);
+    }
+
+    void SpawnBoss() {
+        Instantiate(Boss, transform.position, Quaternion.identity);
     }
 }

@@ -50,8 +50,8 @@ public class Player : MonoBehaviour
 
     // 플레이어 충돌 처리
     private void OnTriggerEnter2D(Collider2D other) {
-        // 충돌 대상이 Ememy이면
-        if (other.gameObject.tag == "Enemy") {
+        // 충돌 대상이 Ememy이거나 Boss이면
+        if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss") {
             Debug.Log("Game Over");
             Destroy(gameObject);
         } else if (other.gameObject.tag == "Coin") { // 충돌 대상이 코인인 경우

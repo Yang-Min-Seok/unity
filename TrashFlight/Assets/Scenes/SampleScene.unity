@@ -227,6 +227,7 @@ MonoBehaviour:
   - {fileID: 3276146557181489335, guid: 39021daa919e0476484f2be4a2298d2d, type: 3}
   - {fileID: 3276146557181489335, guid: 23497e3d77b40485ea5c0d8e86f72fd0, type: 3}
   - {fileID: 3276146557181489335, guid: 663ac2c4b640e41ae8931d0c83673042, type: 3}
+  Boss: {fileID: 3276146557181489335, guid: 4db41a2919da341068d13f6de0615705, type: 3}
   spawnInterval: 1.5
 --- !u!4 &292979107
 Transform:
