@@ -42,6 +42,11 @@ public class Enemy : MonoBehaviour
             hp -= weapon.damage;
             // hp가 0이하로 떨어지면
             if (hp <= 0) {
+                // 보스의 경우
+                if (gameObject.tag == "Boss") {
+                    // 게임 끝내기
+                    GameManager.instance.SetGameOver();
+                }
                 // ememy없애주기
                 Destroy(gameObject);
                 // 코인 만들기

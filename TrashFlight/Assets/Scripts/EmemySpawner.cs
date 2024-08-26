@@ -28,6 +28,11 @@ public class EmemySpawner : MonoBehaviour
         StartCoroutine("EnemyRoutine");
     }
 
+    // 생성 종료
+    public void StopEmemyRoutine() {
+        StopCoroutine("EnemyRoutine");
+    }
+
     // 적 무한 생성하기
     IEnumerator EnemyRoutine() {
         yield return new WaitForSeconds(3f);

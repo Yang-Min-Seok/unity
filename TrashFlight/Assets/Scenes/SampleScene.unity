@@ -507,6 +507,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 1117630322}
+  isGameOVer: 0
 --- !u!1 &926001983
 GameObject:
   m_ObjectHideFlags: 0

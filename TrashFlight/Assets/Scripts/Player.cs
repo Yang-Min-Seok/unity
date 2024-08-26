@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     // Update is called once per frame
     void Update()
     {   
-
         // 마우스 좌표 값 가져오기
         Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         
@@ -33,8 +32,11 @@ public class Player : MonoBehaviour
         // 움직이기
         transform.position = new Vector3(toX, transform.position.y, transform.position.z);
 
-        // 무기 쏘기
-        Shoot();
+        // 게임이 끝나지 않은 경우만
+        if (!GameManager.instance.isGameOVer) {
+            // 무기 쏘기
+            Shoot();
+        }
     }
 
     // 무기 쏘기
@@ -52,8 +54,9 @@ public class Player : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D other) {
         // 충돌 대상이 Ememy이거나 Boss이면
         if (other.gameObject.tag == "Enemy" || other.gameObject.tag == "Boss") {
-            Debug.Log("Game Over");
+            GameManager.instance.SetGameOver();
             Destroy(gameObject);
+
         } else if (other.gameObject.tag == "Coin") { // 충돌 대상이 코인인 경우
             GameManager.instance.IncreaseCoin(); // 코인 올려주기
             Destroy(other.gameObject);

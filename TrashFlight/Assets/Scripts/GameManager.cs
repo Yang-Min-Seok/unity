@@ -11,6 +11,11 @@ public class GameManager : MonoBehaviour
     private TextMeshProUGUI text;
     private int coin = 0;
 
+    // public이여도 인스펙터에서 확인 불가능
+    [HideInInspector]
+    // 게임 끝난는지 확인하는 변수
+    public bool isGameOVer = false;
+
     // Awake 메소드 -> start보다 한단계 먼저 불러짐
     void Awake() {
         // 초기 상태의 경우
@@ -35,6 +40,18 @@ public class GameManager : MonoBehaviour
                 player.Upgrade();
             }
         }
+    }
 
+    // 게임 종료
+    public void SetGameOver() {
+        // 게임 종료 처리
+        isGameOVer = true;
+        // ememySpawner 찾기
+        EmemySpawner enemySpawner = FindObjectOfType<EmemySpawner>();
+        // 찾았으면
+        if (enemySpawner != null) {
+            // 생성 종료
+            enemySpawner.StopEmemyRoutine();
+        }
     }
 }
