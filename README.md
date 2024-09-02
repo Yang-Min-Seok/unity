@@ -96,4 +96,4 @@
 #### ゲームオーバ
 ---
 
-![GIFMaker_me](https://github.com/user-attachments/assets/b78a7aa2-26a6-4c8d-befa-75b4cc767fc2)
+![GIFMaker_me](https://github.com/user-attachments/assets/6de4a616-0863-4c5d-8fac-a532fa87d473)
