@@ -54,7 +54,7 @@ public class EmemySpawner : MonoBehaviour
             spawnCount++;
 
             if (spawnCount % 10 == 0) {
-                enemyIndex++;
+                enemyIndex ++;
                 moveSpeed += 2;
             }
 
