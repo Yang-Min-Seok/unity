@@ -57,23 +57,43 @@
 #### 成果物
 
 ---
-#### : デフォルト画面
+#### デフォルト画面
+---
+
 ![GIFMaker_me](https://github.com/user-attachments/assets/e880cd64-78ba-4182-af01-6aabf17e0f40)
 
-#### : ゲーム開始
+---
+#### ゲーム開始
+---
+
 ![GIFMaker_me](https://github.com/user-attachments/assets/c599fe4c-d53a-46f5-9d65-3cfba33a4a3c)
 
-#### : 敵生成
+---
+#### 敵生成
+---
+
 ![GIFMaker_me (1)](https://github.com/user-attachments/assets/2330276b-7db6-428c-b19e-7da97d12d55c)
 
-#### : 武器アップグレード
+---
+#### 武器アップグレード
+---
+
 ![GIFMaker_me (2)](https://github.com/user-attachments/assets/8943052b-c55e-423d-9f80-6b7cbc0be3e7)
 
-#### : 武器アップグレード２
+---
+#### 武器アップグレード２
+---
+
 ![GIFMaker_me](https://github.com/user-attachments/assets/ff12de72-2d66-432d-939a-19248d25c297)
 
-#### : ボス生成
+---
+#### ボス生成
+---
+
 ![GIFMaker_me (1)](https://github.com/user-attachments/assets/4d6b4dbc-fa99-4edd-96f4-7fcf08cd381e)
 
-#### : ゲームオーバ
+---
+#### ゲームオーバ
+---
+
 ![GIFMaker_me](https://github.com/user-attachments/assets/88acfc0f-8112-497b-a6dd-b70d4d0c87e7)
